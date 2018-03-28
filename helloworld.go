@@ -36,11 +36,11 @@ import (
 
 const VERSION = "1.0"
 
-func versionString() (v string) {
+func versionString() string {
     buildNum := strings.ToUpper(strconv.FormatInt(BUILDTIMESTAMP, 36))
     buildDate := time.Unix(BUILDTIMESTAMP, 0).Format(time.UnixDate)
-    v = fmt.Sprintf("helloworld %s (build %v, %v by %v@%v)", VERSION, buildNum, buildDate, BUILDUSER, BUILDHOST)
-    return
+    v := fmt.Sprintf("helloworld %s (build %v, %v by %v@%v)", VERSION, buildNum, buildDate, BUILDUSER, BUILDHOST)
+    return v
 }
 
 
