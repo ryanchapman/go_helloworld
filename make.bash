@@ -23,6 +23,15 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF 
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
 
+TRUE=0
+FALSE=1
+
+BOLD="$(tput bold)"
+CLR="$(tput sgr0)"
+RED="$(tput setaf 1 0)"
+GREEN="$(tput setaf 10 0)"
+CYAN="$(tput setaf 14 0)"
+
 function _run
 {
     if [[ $1 == fatal ]]; then
